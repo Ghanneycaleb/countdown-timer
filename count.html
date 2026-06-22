@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdown Timer</title>
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="count.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="timer-card" aria-labelledby="timer-title">
+      <h1 id="timer-title">Countdown Timer</h1>
+      <p class="subtitle">Set your time and start the countdown.</p>
+
+      <!-- Time input section -->
+      <div class="input-group">
+        <div class="input-field">
+          <label for="hours">Hours</label>
+          <input type="number" id="hours" min="0" placeholder="00" />
+        </div>
+
+        <div class="input-field">
+          <label for="minutes">Minutes</label>
+          <input type="number" id="minutes" min="0" max="59" placeholder="00" />
+        </div>
+
+        <div class="input-field">
+          <label for="seconds">Seconds</label>
+          <input type="number" id="seconds" min="0" max="59" placeholder="00" />
+        </div>
+      </div>
+
+      <!-- Timer display -->
+      <div class="display-wrapper" aria-live="polite">
+        <p class="display-label">Time Remaining</p>
+        <div id="timerDisplay" class="timer-display">00:00:00</div>
+      </div>
+
+      <!-- Status message area -->
+      <p id="statusMessage" class="status-message">
+        Enter a time above, then click Start.
+      </p>
+
+      <!-- Button controls -->
+      <div class="button-group">
+        <button id="startBtn" class="btn btn-start">Start</button>
+        <button id="pauseBtn" class="btn btn-pause" disabled>Pause</button>
+        <button id="resumeBtn" class="btn btn-resume" disabled>Resume</button>
+        <button id="resetBtn" class="btn btn-reset" disabled>Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Link to external JavaScript file -->
+  <script src="count.js"></script>
+</body>
+</html>
